@@ -7,18 +7,18 @@ A scalable, AI-powered system that analyzes AWS CloudTrail logs using unsupervis
 
 ---
 
-## 🚀 Overview
+## Overview
 
 Modern cloud environments generate vast volumes of log data. Traditional log analysis tools struggle to handle novel attack patterns and zero-day exploits. **CloudTrail Security Analyzer** bridges that gap using:
 
-- 🔍 **Unsupervised anomaly detection** via Isolation Forest  
-- 💬 **Natural language querying** via Retrieval-Augmented Generation (RAG)  
-- 📊 **Interactive dashboards** via Streamlit  
-- 🧠 **AI-assisted summarization** using Gemini 1.5 Pro
+-  **Unsupervised anomaly detection** via Isolation Forest  
+-  **Natural language querying** via Retrieval-Augmented Generation (RAG)  
+-  **Interactive dashboards** via Streamlit  
+-  **AI-assisted summarization** using Gemini 1.5 Pro
 
 ---
 
-## 📌 Objectives
+##  Objectives
 
 1. Detect anomalies in CloudTrail logs indicating potential threats  
 2. Allow human-friendly log querying using natural language  
@@ -26,28 +26,28 @@ Modern cloud environments generate vast volumes of log data. Traditional log ana
 
 ---
 
-## 🧱 Architecture
+##  Architecture
 
 The system is built on a modular stack consisting of:
 
-### 🔄 Data Ingestion & Parsing
+###  Data Ingestion & Parsing
 
 - Parses deeply nested AWS CloudTrail JSON logs (up to 4 levels)
 - Extracts features like IP entropy, geolocation variance, and API usage frequency
 
-### 🤖 Anomaly Detection
+###  Anomaly Detection
 
 - Uses **Isolation Forest** (Scikit-learn) for unsupervised detection  
 - Prioritizes incidents involving high-risk API calls or rare IP sources  
 
-### 🧠 Natural Language Interface
+###  Natural Language Interface
 
 - Integrates **RAG + Gemini 1.5 Pro** via ChromaDB  
 - Supports queries like:  
   - _"What actions did root user take yesterday?"_  
   - _"Show failed login attempts last weekend"_  
 
-### 📊 Streamlit Dashboard
+###  Streamlit Dashboard
 
 - Upload new log files directly  
 - View anomalies by:
@@ -80,7 +80,7 @@ The system is built on a modular stack consisting of:
 
 ---
 
-## 🔍 Challenges Faced
+##  Challenges Faced
 
 - Handling varying CloudTrail schemas across services  
 - Tuning Isolation Forest to reduce false positives  
@@ -89,12 +89,12 @@ The system is built on a modular stack consisting of:
 
 ---
 
-## 🧭 Future Improvements
+## Future Improvements
 
-- ☁️ Real-time streaming (e.g., Kinesis integration)  
-- 🔐 Role-Based Access Control for dashboards  
-- 🌍 Support for Azure and GCP logs  
-- 📈 Predictive modeling (e.g., breach forecasting)
+- Real-time streaming (e.g., Kinesis integration)  
+-  Role-Based Access Control for dashboards  
+-  Support for Azure and GCP logs  
+-  Predictive modeling (e.g., breach forecasting)
 
 ---
 
